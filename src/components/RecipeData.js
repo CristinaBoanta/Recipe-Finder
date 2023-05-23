@@ -5,8 +5,19 @@ const RecipeData = (props) => {
     <div>
       {itemData &&
         itemData.map((item) => {
-        //   console.log(item);
-          return <div>Recipe name: {item.recipe.label}</div>;
+          const ingredients = item.recipe.ingredients;
+          return (
+            <div>
+              <div>Recipe name: {item.recipe.label}</div>
+              <div>{ingredients.map((ingredient) => {
+                return (
+                  <div className="ingredient">
+                    {ingredient.text}
+                  </div>
+                )
+              })}</div>
+            </div>
+          );
         })}
     </div>
   );

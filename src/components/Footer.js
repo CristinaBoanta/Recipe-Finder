@@ -5,7 +5,7 @@ const Footer = () => {
           <div className="flex justify-between items-center">
             <p className="text-sm">© 2023 Something something</p>
             <div className="flex space-x-4">
-                Created by MA-TA
+
             </div>
           </div>
         </div>

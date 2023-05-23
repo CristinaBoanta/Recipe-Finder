@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import RecipeData from "../components/RecipeData";
+import Search from "../components/Search";
 
 const Listing = () => {
 
@@ -13,8 +14,6 @@ const Listing = () => {
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-    console.log("zzz");
-    console.dir(event.target);
   }
 
   const apiResponse = (keyword) => {
@@ -32,9 +31,7 @@ const Listing = () => {
       <Header />
         <RecipeData itemData={recipeData}/>
 
-        <input type="text" value={inputValue} onChange={handleInputChange} />
-
-        <button onClick={() => apiResponse(inputValue)}>Search</button>
+        <Search dataFromInput={inputValue} inputChangeFunction={handleInputChange} responseFromApi={apiResponse} />
       <Footer />
     </div>
   );
