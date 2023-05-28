@@ -1,9 +1,14 @@
-const CustomButton = () => {
-  return (
-    <button className="px-4 py-2 text-white bg-red-700 rounded hover:text-red-700 hover:bg-white focus:outline-none focus:bg-red-800 min-w-[300px]">
-      Click Me
-    </button>
-  );
-};
+import tw from "twin.macro";
 
-export default CustomButton;
+const Button = tw.button`
+  text-red-900
+  text-base
+  m-4
+  p-1
+  border-2
+  border-red-900
+  rounded-md
+`;
+
+export default Button;
+

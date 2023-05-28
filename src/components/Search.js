@@ -1,3 +1,5 @@
+import Button from './Button';
+import { useState } from 'react';
 
 const Search = (props) => {
 
@@ -11,6 +13,7 @@ const Search = (props) => {
     }
   };
 
+
   return (
     <>
       <input
@@ -22,7 +25,7 @@ const Search = (props) => {
         onKeyDown={handleKeyDown}
       />
 
-      <button onClick={getApiData}>Search</button>
+      {/* <Button onClick={getApiData} buttonText={"Click to search"}></Button> */}
     </>
   );
 };

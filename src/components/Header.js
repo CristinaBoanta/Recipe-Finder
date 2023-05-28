@@ -4,12 +4,12 @@ const Header = () => {
   return (
     <header className="bg-gradient-to-r to-rosewood from-coral text-white py-4">
       <div className="container mx-auto flex justify-between items-center">
-      <Link to="/"><h1 className="text-xl font-bold">Recipease</h1></Link>
+      <Link to="/"><h1 className="text-3xl font-bold text">Recipease</h1></Link>
         <nav>
           <ul className="flex space-x-4">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Recipes</a></li>
-            <li><a href="#">About</a></li>
+            <li className="text text-xl"><Link to="/">Home</Link></li>
+            <li className="text text-xl"><Link to="/">Recipes</Link></li>
+            <li className="text text-xl"><Link to="/">About</Link></li>
           </ul>
         </nav>
       </div>
