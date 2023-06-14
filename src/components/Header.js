@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="bg-gradient-to-r to-rosewood from-coral text-white py-4">
+    <header className=" text-white py-4">
       <div className="container mx-auto flex justify-between items-center">
       <Link to="/"><h1 className="text-3xl font-bold text">Recipease</h1></Link>
         <nav>

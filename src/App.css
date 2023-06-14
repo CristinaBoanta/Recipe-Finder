@@ -8,6 +8,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Handlee', cursive;
+}
+
+#root {
+  height: 100vh;
 }
 
 html, body {
@@ -21,28 +26,67 @@ html, body {
   }
 }
 
-.heroTitle {
-  font-family: 'Handlee', cursive;
-}
 
 .title {
-  font-family: 'Handlee', cursive;
   font-size: 50px;
   color: #000;
-  padding: 10px 20px;
-}
-
-.text {
-  font-family: 'Handlee', cursive;
-}
-
-input[type=text] {
-  border: 2px solid rgb(69, 17, 17);
-  margin: 20px;
-  padding: 10px;
 }
 
 .ingredient {
   color: rgb(150, 34, 34);
   font-weight: 700;
+}
+
+.svg_bg {
+  background-image: url( './assets/img/layered-waves-haikei.svg' );
+  background-position: top;
+  background-size: cover;
+}
+
+
+/* modal */
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: rgba(0, 0, 0, 0.274);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* spinner */
+
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(52, 52, 52, 0.5);
 }
