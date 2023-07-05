@@ -1,12 +1,13 @@
 import tw from "twin.macro";
 
 const Button = tw.button`
-  text-red-900
+  text-[white]
   text-base
   p-1
   border-2
-  border-red-900
+  border-[darkGreen]
   rounded-md
+  bg-[darkGreen]
 `;
 
 export default Button;

@@ -3,12 +3,16 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Handlee', cursive;
+  /* font-family: 'Handlee', cursive;
+   */
+  font-family: 'Karla', sans-serif;
 }
 
 #root {
@@ -37,12 +41,31 @@ html, body {
   font-weight: 700;
 }
 
-.svg_bg {
+/* .svg_bg {
   background-image: url( './assets/img/layered-waves-haikei.svg' );
   background-position: top;
   background-size: cover;
+} */
+
+.hp-img {
+    border-left: 20px solid #ede7ae;
+    /* -moz-box-shadow: -6px 0px 5px #ccc; */
+    /* -webkit-box-shadow: -6px 0px 5px #ccc; */
+    box-shadow: -12px -1px 0px 8px #dac14b; 
+    /* -moz-border-radius: 190px; */
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    overflow: hidden;
 }
 
+.heroTitle {
+  /* background-image: url('./assets/img/blob.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%; */
+}
 
 /* modal */
 

@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import RecipeData from "../components/RecipeData";
 import Search from "../components/Search";
+import Button from "../components/Button";
 
 const Listing = () => {
   const [recipeData, setRecipeData] = useState(null);
@@ -24,6 +25,7 @@ const Listing = () => {
         setRecipeImage(data.hits);
         setIsLoading(false);
         setNextPageLink(data._links.next.href);
+        console.log(data);
       })
       .catch((error) => {
         console.error('Error fetching recipes:', error);
@@ -45,9 +47,9 @@ const Listing = () => {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      <div className="flex flex-col w-full px-12 h-screen overflow-auto">
+      <div className="md:container md:mx-auto flex flex-col w-full px-12 h-screen overflow-auto">
         <div>
-          <h1 className="title">Find recipes</h1>
+          <h1 className="title my-6">Find recipes</h1>
         </div>
         <Search
           dataFromInput={inputValue}
@@ -57,9 +59,9 @@ const Listing = () => {
         />
         <RecipeData itemData={recipeData} image={recipeImage} />
         {nextPageLink && (
-          <button onClick={handleNextPage} disabled={isLoading}>
+          <Button onClick={handleNextPage} disabled={isLoading} className="my-20 w-full max-w-[21rem] ml-auto">
             Next Page
-          </button>
+          </Button>
         )}
       </div>
       <Footer />

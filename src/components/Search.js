@@ -2,7 +2,6 @@ import Button from "./Button";
 import { useState } from "react";
 
 const Search = (props) => {
-
   const [error, setError] = useState("");
 
   const { dataFromInput, inputChangeFunction, responseFromApi, isLoading } =
@@ -12,7 +11,7 @@ const Search = (props) => {
     if (dataFromInput.trim() === "") {
       setError("Please enter a keyword");
     } else {
-      setError(""); 
+      setError("");
       responseFromApi(dataFromInput);
     }
   };
@@ -25,30 +24,26 @@ const Search = (props) => {
 
   return (
     <>
-    <div className="min-h-[100px]">
-    <input
-        type="text"
-        value={dataFromInput}
-        onChange={(event) => {
-          inputChangeFunction(event);
-          setError(""); 
-        }}
-        onKeyDown={handleKeyDown}
-        class="border-2 border-darkBrown rounded-custom p-2 w-full"
-      />
+      <div className="min-h-[100px]">
+        <input
+          type="text"
+          value={dataFromInput}
+          onChange={(event) => {
+            inputChangeFunction(event);
+            setError("");
+          }}
+          onKeyDown={handleKeyDown}
+          class="border-2 border-darkBrown rounded-custom p-2 w-full"
+        />
 
-{error && <p>{error}</p>}
-    </div>
-
-      
-
+        {error && <p className="text-lg my-3">{error}</p>}
+      </div>
 
       <Button onClick={getApiData} buttonText={"Click to search"}>
         Search
       </Button>
 
-      {isLoading && <div className="spinner">
-      </div>}
+      {isLoading && <div className="spinner"></div>}
     </>
   );
 };
