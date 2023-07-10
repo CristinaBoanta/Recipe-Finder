@@ -11,4 +11,3 @@ const Button = tw.button`
 `;
 
 export default Button;
-

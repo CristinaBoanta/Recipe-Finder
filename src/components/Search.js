@@ -33,7 +33,7 @@ const Search = (props) => {
             setError("");
           }}
           onKeyDown={handleKeyDown}
-          class="border-2 border-darkBrown rounded-custom p-2 w-full"
+          className="border-2 border-darkBrown rounded-custom p-2 w-full"
         />
 
         {error && <p className="text-lg my-3">{error}</p>}

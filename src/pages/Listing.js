@@ -25,10 +25,9 @@ const Listing = () => {
         setRecipeImage(data.hits);
         setIsLoading(false);
         setNextPageLink(data._links.next.href);
-        console.log(data);
       })
       .catch((error) => {
-        console.error('Error fetching recipes:', error);
+        console.error("Error fetching recipes:", error);
         setIsLoading(false);
       });
   };
@@ -59,7 +58,11 @@ const Listing = () => {
         />
         <RecipeData itemData={recipeData} image={recipeImage} />
         {nextPageLink && (
-          <Button onClick={handleNextPage} disabled={isLoading} className="my-20 w-full max-w-[21rem] ml-auto">
+          <Button
+            onClick={handleNextPage}
+            disabled={isLoading}
+            className="my-20 w-full max-w-[21rem] ml-auto"
+          >
             Next Page
           </Button>
         )}
