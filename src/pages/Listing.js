@@ -25,6 +25,7 @@ const Listing = () => {
         setRecipeImage(data.hits);
         setIsLoading(false);
         setNextPageLink(data._links.next.href);
+        console.log(data.hits);
       })
       .catch((error) => {
         console.error("Error fetching recipes:", error);
@@ -71,5 +72,6 @@ const Listing = () => {
     </div>
   );
 };
+
 
 export default Listing;

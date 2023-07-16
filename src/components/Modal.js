@@ -4,7 +4,7 @@ const Modal = ({ isOpen, onClose, children }) => {
   return (
     <div className="modal">
       <div className="modal-content">
-        <span className="close-button" onClick={onClose}>
+        <span className="close-button mr-6 mt-2" onClick={onClose}>
           &times;
         </span>
         {children}
