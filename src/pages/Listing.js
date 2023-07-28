@@ -16,6 +16,17 @@ const Listing = () => {
     setInputValue(event.target.value);
   };
 
+  const randomKeywords = [
+    "dessert",
+    "chicken",
+    "fish",
+    "potato",
+    "fruit",
+    "vegetable",
+  ];
+  const lastItemIndex = randomKeywords.length - 1;
+  const randomKeywordIndex = Math.floor(Math.random() * lastItemIndex);
+
   const fetchRecipes = (url) => {
     setIsLoading(true);
     fetch(url)
@@ -44,6 +55,11 @@ const Listing = () => {
     }
   };
 
+  useEffect(() => {
+    const urlRandomized = `https://api.edamam.com/api/recipes/v2?type=public&q=${randomKeywords[randomKeywordIndex]}&app_id=56fb8644&app_key=168186d59b0ca334c075db612ed42b82&random=true`;
+    fetchRecipes(urlRandomized);
+  }, []);
+
   return (
     <div className="flex flex-col h-screen">
       <Header />
@@ -58,20 +74,20 @@ const Listing = () => {
           isLoading={isLoading}
         />
         <RecipeData itemData={recipeData} image={recipeImage} />
-        {nextPageLink && (
+
+        {nextPageLink ? (
           <Button
             onClick={handleNextPage}
             disabled={isLoading}
-            className="my-20 w-full max-w-[21rem] ml-auto"
-          >
-            Next Page
-          </Button>
+            buttonText="Next page"
+          ></Button>
+        ) : (
+          <div>No more items to show</div>
         )}
       </div>
       <Footer />
     </div>
   );
 };
-
 
 export default Listing;

@@ -40,7 +40,6 @@ const Search = (props) => {
       </div>
 
       <Button onClick={getApiData} buttonText={"Click to search"}>
-        Search
       </Button>
 
       {isLoading && <div className="spinner"></div>}
