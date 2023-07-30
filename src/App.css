@@ -42,18 +42,6 @@ html, body {
 }
 
 
-.hp-img {
-    border-left: 20px solid #ede7ae;
-    /* -moz-box-shadow: -6px 0px 5px #ccc; */
-    /* -webkit-box-shadow: -6px 0px 5px #ccc; */
-    box-shadow: -12px -1px 0px 8px #dac14b; 
-    /* -moz-border-radius: 190px; */
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    overflow: hidden;
-}
-
-
 /* modal */
 
 .modal {
@@ -71,7 +59,6 @@ html, body {
 
 .modal-content {
   background-color: #fff;
-  /* padding: 20px; */
 }
 
 .close-button {

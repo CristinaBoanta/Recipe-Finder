@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 import RecipeData from "../components/RecipeData";
 import Search from "../components/Search";
@@ -36,10 +35,10 @@ const Listing = () => {
         setRecipeImage(data.hits);
         setIsLoading(false);
         setNextPageLink(data._links.next.href);
-        console.log(data.hits);
+        // console.log(data.hits);
       })
       .catch((error) => {
-        console.error("Error fetching recipes:", error);
+        // console.error("Error fetching recipes:", error);
         setIsLoading(false);
       });
   };
@@ -63,7 +62,7 @@ const Listing = () => {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      <div className="md:container md:mx-auto flex flex-col w-full px-12 h-screen overflow-auto">
+      <div className="md:container md:mx-auto flex flex-col w-full px-12 h-screen">
         <div>
           <h1 className="title my-6">Find recipes</h1>
         </div>
@@ -75,17 +74,19 @@ const Listing = () => {
         />
         <RecipeData itemData={recipeData} image={recipeImage} />
 
-        {nextPageLink ? (
+      <div className="w-full flex justify-end p-8">
+      {nextPageLink ? (
           <Button
             onClick={handleNextPage}
             disabled={isLoading}
             buttonText="Next page"
+            className="min-w-[17rem]"
           ></Button>
         ) : (
           <div>No more items to show</div>
         )}
       </div>
-      <Footer />
+      </div>
     </div>
   );
 };

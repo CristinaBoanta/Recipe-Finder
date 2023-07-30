@@ -128,7 +128,7 @@ const RecipeData = (props) => {
               </div>
               <div className="modal-bottom p-4 md:p-6 bg-darkGreen text-white flex">
                 <Link to={selectedItem.recipe.url} className="ml-auto">
-                  <Button>Go to recipe website</Button>
+                  <Button buttonText="Go to recipe website"></Button>
                 </Link>
               </div>
             </div>

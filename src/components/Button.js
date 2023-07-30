@@ -1,21 +1,20 @@
-
 const Button = (props) => {
+  const { buttonText, onClick, disabled, className } = props;
 
-  const { buttonText, onClick, disabled } = props;
+  const defaultClassName =
+    "text-white p-1 border-2 border-[darkGreen] rounded-md bg-[darkGreen]";
+
+  const combinedClassName = className ? `${defaultClassName} ${className}` : defaultClassName;
 
   return (
     <button
-      className="text-[white]
-      text-base
-      p-1
-      border-2
-      border-[darkGreen]
-      rounded-md
-      bg-[darkGreen]"
+      className={combinedClassName}
       onClick={onClick}
       disabled={disabled}
-    >{buttonText}</button>
+    >
+      {buttonText}
+    </button>
   );
 };
+
 export default Button;
- 

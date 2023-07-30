@@ -13,12 +13,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'rosewood': '#570000',
-        'coral': '#de7c5a',
         'darkBrown': "#280000",
         'darkGreen': '#1A323A',
-        'golden' : '#dac14b',
-        'lightGold': '#ede7ae',
         'white' : '#fff',
         'black' : '#000'
       },
