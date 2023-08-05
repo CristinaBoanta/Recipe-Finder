@@ -30,19 +30,19 @@ const Header = () => {
         >
           <Link
             to="/"
-            className="block px-4 py-4 text-xl hover:bg-white hover:text-darkGreen"
+            className="block px-4 py-4 text-xl hover:bg-white hover:text-darkGreen duration-500"
           >
             Home
           </Link>
           <Link
             to="/"
-            className="block px-4 py-4 text-xl hover:bg-white hover:text-darkGreen"
+            className="block px-4 py-4 text-xl hover:bg-white hover:text-darkGreen duration-500"
           >
             Recipes
           </Link>
           <Link
             to="/"
-            className="block px-4 py-4 text-xl hover:bg-white hover:text-darkGreen"
+            className="block px-4 py-4 text-xl hover:bg-white hover:text-darkGreen duration-500"
           >
             About
           </Link>

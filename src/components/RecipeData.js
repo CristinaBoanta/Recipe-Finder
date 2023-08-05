@@ -22,7 +22,6 @@ const RecipeData = (props) => {
   };
 
   const keysToDisplay = ["FAT", "CHOLE", "NA", "CHOCDF", "PROCNT", "SUGAR"];
-
   
 
   return (
@@ -48,8 +47,8 @@ const RecipeData = (props) => {
                   <div className="font-bold text-xl mb-2">
                     {item.recipe.label}
                   </div>
-                  <div>Meal type: {item.recipe.mealType}</div>
-                  <div>Cuisine type: {item.recipe.cuisineType}</div>
+                  <div><strong className="text-[#006400]">Meal type:</strong> {item.recipe.mealType}</div>
+                  <div><strong className="text-[#006400]">Cuisine type:</strong> {item.recipe.cuisineType}</div>
                   <p className="text-gray-700 text-base"></p>
                 </div>
               </div>
@@ -72,11 +71,11 @@ const RecipeData = (props) => {
                     className="object-cover w-full h-full"
                   />
                 </div>
-                <div className="modal-text flex flex-col md:flex-1 md:ml-4">
+                <div className="modal-text flex flex-col md:flex-1 md:ml-4 h-[50vh] overflow-x-scroll">
                   <div className="pb-4">
-                    <p className="flex items-center gap-2 pb-2">
+                    <p className="flex items-center gap-2 pb-6">
                       <FaUtensils size={25} color="darkGreen" />{" "}
-                      <p className="text-base md:text-lg">
+                      <p className="md:text-lg text-[#006400] text-bold">
                         {" "}
                         {selectedItem.recipe.yield} servings (serving size ={" "}
                         {(
@@ -100,11 +99,11 @@ const RecipeData = (props) => {
                     )}
 
                     <div className="mt-4">
-                      <p className="text-base md:text-lg font-semibold">
+                      <p className="text-lg md:text-2xl font-semibold mb-3">
                         Nutrition facts
                       </p>
                       <p className="py-1 border-b border-black md:text-lg px-2 md:px-4">
-                        {selectedItem.recipe.calories.toFixed(0)} calories
+                        <span className="text-[#006400] text-bold">Calories:</span> {selectedItem.recipe.calories.toFixed(0)}
                       </p>
 
                       {keysToDisplay.map((key) => {
@@ -116,7 +115,7 @@ const RecipeData = (props) => {
                             className="flex gap-2 py-1 border-b border-black md:text-lg px-2 md:px-4"
                             key={key}
                           >
-                            <p>{value.label} :</p>
+                            <p className="text-[#006400] text-bold">{value.label} :</p>
                             <p>{value.quantity.toFixed(2)}</p>
                             <p>{value.unit}</p>
                           </div>

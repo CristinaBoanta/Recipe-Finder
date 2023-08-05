@@ -83,7 +83,7 @@ const Listing = () => {
             className="min-w-[17rem]"
           ></Button>
         ) : (
-          <div>No more items to show</div>
+          <div className="m-auto font-bold text-xl mb-2">No more items to show</div>
         )}
       </div>
       </div>
