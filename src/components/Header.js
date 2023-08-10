@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-darkGreen text-white py-2">
+    <header className="bg-darkGreen text-white py-2 z-0">
       <div className="md:container md:mx-auto px-12 flex justify-between items-center">
         <Link to="/">
           <h1 className="text-3xl font-bold text-white">RecipEase</h1>
@@ -19,7 +19,7 @@ const Header = () => {
             className="text-xl focus:outline-none"
             onClick={handleMobileMenuToggle}
           >
-            ☰ {/* Hamburger Icon */}
+            ☰ 
           </button>
         </div>
 

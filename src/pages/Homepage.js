@@ -11,37 +11,6 @@ const Homepage = () => {
       <div className="homepage flex items-center bg-gradient-to-r text-white">
         <div className="flex items-center w-full justify-center h-full gap-[50px] relative">
           <div className="flex flex-1 pl-8 heroTitle">
-            {/* <div className="relative h-full w-full">
-              <div className="flex flex-col gap-8 absolute">
-                <h1 className="text-6xl text-center text-white">
-                  Making cooking <br />  a little easier
-                </h1>
-                <Link to="/listing">
-                  <Button buttonText="Find recipes"></Button>
-                </Link>
-              </div>
-              <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" className="h-full max-h-[75vh]">
-                <defs>
-                  <radialGradient id="b" r="100%" cx="50%" cy="50%">
-                    <stop offset="0%" stop-color="#458a4f" />
-                    <stop offset="100%" stop-color="#1085ad" />
-                  </radialGradient>
-                  <clipPath id="a">
-                    <path
-                      fill="currentColor"
-                      d="M901 613q-90 113-176.5 212.5t-199 21.5q-112.5-78-251-80.5T80.5 632Q25 500 157 423.5T350 287q61-60 164.5-106T662 242.5Q706 350 848.5 425T901 613Z"
-                    />
-                  </clipPath>
-                </defs>
-                <g clip-path="url(#a)">
-                  <path
-                    fill="url(#b)"
-                    d="M901 613q-90 113-176.5 212.5t-199 21.5q-112.5-78-251-80.5T80.5 632Q25 500 157 423.5T350 287q61-60 164.5-106T662 242.5Q706 350 848.5 425T901 613Z"
-                  />
-                </g>
-              </svg>
-            </div> */}
-
             <div className="relative h-full w-full">
               <svg
                 viewBox="0 0 1000 1000"
