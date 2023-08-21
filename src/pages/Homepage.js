@@ -1,60 +1,33 @@
 import Header from "../components/Header";
-import HomepageImg from "../assets/img/hp_img.png";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
+import hp_img from "../assets/img/hp.png";
 
 const Homepage = () => {
   return (
-    <div className="homepage flex flex-col bg-darkGreen">
+    <div className="flex flex-col bg-darkGreen min-h-screen">
       <Header />
 
-      <div className="homepage flex items-center bg-gradient-to-r text-white">
-        <div className="flex items-center w-full justify-center h-full gap-[50px] relative">
-          <div className="flex flex-1 pl-8 heroTitle">
-            <div className="relative h-full w-full">
-              <svg
-                viewBox="0 0 1000 1000"
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-full max-h-[75vh]"
-              >
-                <defs>
-                  <radialGradient id="b" r="100%" cx="50%" cy="50%">
-                    <stop offset="0%" stop-color="#458a4f" />
-                    <stop offset="100%" stop-color="#1085ad" />
-                  </radialGradient>
-                  <clipPath id="a">
-                    <path
-                      fill="currentColor"
-                      d="M901 613q-90 113-176.5 212.5t-199 21.5q-112.5-78-251-80.5T80.5 632Q25 500 157 423.5T350 287q61-60 164.5-106T662 242.5Q706 350 848.5 425T901 613Z"
-                    />
-                  </clipPath>
-                </defs>
-                <g clip-path="url(#a)">
-                  <path
-                    fill="url(#b)"
-                    d="M901 613q-90 113-176.5 212.5t-199 21.5q-112.5-78-251-80.5T80.5 632Q25 500 157 423.5T350 287q61-60 164.5-106T662 242.5Q706 350 848.5 425T901 613Z"
-                  />
-                </g>
-                <foreignObject x="25%" y="30%" width="50%" height="50%">
-                  <div className="flex flex-col items-center justify-center h-full gap-8">
-                    <h1 className="text-6xl text-center text-white flex flex-col gap-4">
-                      <div>Making cooking</div>
-                      <div>a little easier</div>
-                    </h1>
-                    <Link to="/listing">
-                      <Button
-                        buttonText="Find recipes"
-                        className="text-2xl px-8 py-4"
-                      ></Button>
-                    </Link>
-                  </div>
-                </foreignObject>
-              </svg>
+      <div className="flex items-center bg-gradient-to-r text-white h-full p-4 md:p-8 xl:p-20 lg:p-12">
+        <div className="flex items-center flex-col-reverse xl:flex-row w-full h-full relative md:justify-between gap-6 md:gap-8 lg:gap-8">
+          <div className="flex heroTitle flex-1 justify-center lg:justify-center">
+            <div className="flex flex-col items-center md:items-start justify-center h-full gap-4 md:gap-8 px-4 md:px-8 lg:px-12 max-w-md md:max-w-[80%]">
+              <h2 className="text-4xl lg:text-4xl xl:text-7xl text-center md:text-left text-white hp_heading">
+                A world full of flavour awaits you...
+              </h2>
+              <p className="hp_description text-base md:text-lg lg:text-2xl">Welcome to RecipEase, where culinary inspiration meets innovation.
+                Whether you're a seasoned chef or just starting your culinary journey, our recipe finding app is your gateway to a world of delicious possibilities. Browse a collection of carefully curated recipes, discover new flavors, and embark on a culinary adventure that will tantalize your taste buds. Get ready to elevate your cooking game.</p>
+              <Link to="/listing">
+                <Button
+                  buttonText="Find recipes"
+                  className="text-xl px-4 py-2"
+                ></Button>
+              </Link>
             </div>
           </div>
 
-          <div className="hp-img absolute right-0 bottom-0 md:h-[30vw] lg:h-[25vw] 2xl:h-[25vw]">
-            <img src={HomepageImg} className="h-full" alt="homepage" />
+          <div className="flex flex-1 items-center justify-center md:ml-8 max-w-[60vw] lg:max-w-[20vw] xl:max-w-[30vw] md:max-w-[40vw]">
+            <img src={hp_img} alt="Homepage" />
           </div>
         </div>
       </div>

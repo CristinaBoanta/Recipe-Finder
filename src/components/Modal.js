@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 const Modal = ({ isOpen, onClose, children }) => {
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (isOpen && event.target.classList.contains('modal-overlay')) {
-        onClose();
-      }
-    };
+  const handleOutsideClick = (event) => {
+    if (isOpen && event.target.classList.contains("modal-overlay")) {
+      onClose();
+    }
+  };
 
-    document.addEventListener('click', handleOutsideClick);
+  useEffect(() => {
+    document.addEventListener("click", handleOutsideClick);
 
     return () => {
-      document.removeEventListener('click', handleOutsideClick);
+      document.removeEventListener("click", handleOutsideClick);
     };
   }, [isOpen, onClose]);
 
